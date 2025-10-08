@@ -9,17 +9,17 @@ const Home = () => {
   const [openTop, setOpenTop] = useState(false)
   const [scrollY, setScrollY] = useState(0)
   const images = [
-    "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-    "https://images.unsplash.com/photo-1491553895911-0055eca6402d",
-    "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d",
-    "https://images.unsplash.com/photo-1473187983305-f615310e7daa",
+    "https://tipsg.in/assets/img/img/full%20stack%20(1).svg",
+    "https://tipsg.in/assets/img/img/cyber%20security.svg",
+    "https://tipsg.in/assets/img/img/ai.svg",
+    "https://tipsg.in/assets/img/img/tipsg%2007.jpg",
     "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-    "https://images.unsplash.com/photo-1481349518771-20055b2a7b24"
+    "https://images.unsplash.com/photo-1473187983305-f615310e7daa"
   ]
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
-    const timer = setInterval(() => setCurrentIndex((p) => (p + 1) % images.length), 3000)
+    const timer = setInterval(() => setCurrentIndex((p) => (p + 1) % images.length), 2500)
     return () => clearInterval(timer)
   }, [images.length])
 
@@ -28,6 +28,12 @@ const Home = () => {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  // const cardData = [
+  //   { title: "Become an AI & Data Science Expert", description: "This is the first card", image: "https://tipsg.in/assets/img/img/detascienceexpert.png" },
+  //   { title: "Card 2", description: "This is the second card", image: "https://tipsg.in/assets/img/img/fulllstack.png" },
+  //   { title: "Card 3", description: "This is the third card", image: "https://tipsg.in/assets/img/img/fulllstack.png" },
+  // ];
 
   return (
     <>
@@ -63,7 +69,7 @@ const Home = () => {
           </div>
         </div>
 
-        {openTop && 
+        {openTop &&
           <div className="lg:hidden bg-white shadow-md px-6 py-4 space-y-4">
             <div className="flex gap-2 items-center">
               <p className="w-10 h-10 rounded-full flex justify-center items-center bg-blue-400 text-white"><CiLocationOn size={20} /></p>
@@ -84,7 +90,7 @@ const Home = () => {
         }
       </nav>
 
-      <nav className={`bg-blue-500 w-full fixed z-50 left-0 shadow-md transition-all duration-500 ${scrollY > 100 ? "top-0" : "top-[73px]"}`}>
+      <nav className={`bg-blue-500 w-full fixed z-50 left-0 shadow-md transition-all duration-500 ${scrollY > 100 ? "top-0" : "top-[73px]"} nav2`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
           <div className="flex gap-6 text-white font-semibold flex-wrap">
             <p className="hover:text-blue-200 cursor-pointer">Home</p>
@@ -109,12 +115,48 @@ const Home = () => {
         </div>
       </nav>
 
-      <div className="relative w-full h-[100vh] mt-[160px]">
+      <div className="relative w-full h-[100vh] mt-[180px] slide1">
         <img src={images[currentIndex]} alt={`slide-${currentIndex}`} className="w-full h-full object-cover transition-all duration-700 ease-in-out" />
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2">
           {images.map((_, index) => (
             <div key={index} className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-white" : "bg-gray-400"}`}></div>
           ))}
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="flex flex-col gap-6 md:flex-row md:gap-6">
+
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden flex-1 hover:shadow-2xl transition-shadow duration-300">
+            <img src="https://tipsg.in/assets/img/img/detascienceexpert.png" alt="Card 1" className="w-full h-48 object-cover overflow-scroll" />
+            <div className="p-5">
+              <h2 className="mb-2 font-semibold">Become an AI & Data Science Expert</h2>
+              <h1 className="font-bold hover:text-blue-400 text-xl">Master 100+ Tools in Applied AI, ML & Big Data</h1>
+              <p className="text-gray-500 mt-1">Get trained by industry experts and IIT alumni. Work on live projects in NLP, Computer Vision, Generative AI, and more.</p>
+              <p className="text-sm mt-1">AI & Data Science Course India, IIT AI Degree, Applied AI Training, Data Science Certification</p>
+            </div>
+          </div>
+
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden flex-1 hover:shadow-2xl transition-shadow duration-300">
+            <img src="https://tipsg.in/assets/img/img/fulllstack.png" alt="Card 2" className="w-full h-48 object-cover" />
+            <div className="p-4">
+              <h2 className="mb-2 font-semibold">Become an AI & Data Science Expert</h2>
+              <h1 className="font-bold hover:text-blue-400 text-xl">Master 100+ Tools in Applied AI, ML & Big Data</h1>
+              <p className="text-gray-500 mt-1">Get trained by industry experts and IIT alumni. Work on live projects in NLP, Computer Vision, Generative AI, and more.</p>
+              <p className="text-sm mt-1">AI & Data Science Course India, IIT AI Degree, Applied AI Training, Data Science Certification</p>
+            </div>
+          </div>
+
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden flex-1 hover:shadow-2xl transition-shadow duration-300">
+            <img src="https://tipsg.in/assets/img/img/fulllstack.png" alt="Card 3" className="w-full h-48 object-cover" />
+            <div className="p-4">
+              <h2 className="mb-2 font-semibold">Become an AI & Data Science Expert</h2>
+              <h1 className="font-bold hover:text-blue-400 text-xl">Master 100+ Tools in Applied AI, ML & Big Data</h1>
+              <p className="text-gray-500 mt-1">Get trained by industry experts and IIT alumni. Work on live projects in NLP, Computer Vision, Generative AI, and more.</p>
+              <p className="text-sm mt-1">AI & Data Science Course India, IIT AI Degree, Applied AI Training, Data Science Certification</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </>
