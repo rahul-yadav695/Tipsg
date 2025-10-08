@@ -1,11 +1,25 @@
 @import "tailwindcss";
 
 
-@media(max-width : 800px){
-    .nav2{
+.postion {
+    background-image: url('https://tipsg.in/assets/img/img/bg-img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+@media(max-width : 800px) {
+    .nav2 {
         display: none;
     }
-    .slide1{
+
+    .slide1 {
         margin-top: -8vh;
     }
 }

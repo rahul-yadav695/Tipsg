@@ -4,6 +4,7 @@ import { MdOutlineMailOutline } from "react-icons/md"
 import { HiMenuAlt3, HiX } from "react-icons/hi"
 import { FaFacebookSquare, FaInstagramSquare, FaLinkedin, FaLongArrowAltRight } from "react-icons/fa"
 import { FaPhoneVolume } from "react-icons/fa6"
+import { FaLaptop, FaUsers, FaHandshake } from "react-icons/fa";
 
 const Home = () => {
   const [openTop, setOpenTop] = useState(false)
@@ -124,11 +125,15 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mt-10">Why Choose TIPS-G ?</h1>
+        <p className="mt-1">Empowering Your Career with the Best in Education and Industry Experience</p>
+      </div>
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-col gap-6 md:flex-row md:gap-6">
 
           <div className="bg-white shadow-lg rounded-lg overflow-hidden flex-1 hover:shadow-2xl transition-shadow duration-300">
-            <img src="https://tipsg.in/assets/img/img/detascienceexpert.png" alt="Card 1" className="w-full h-48 object-cover overflow-scroll" />
+            <img src="https://tipsg.in/assets/img/img/detascienceexpert.png" alt="Card 1" className="w-full h-48 object-cover transition-transform duration-1000 hover:scale-110" />
             <div className="p-5">
               <h2 className="mb-2 font-semibold">Become an AI & Data Science Expert</h2>
               <h1 className="font-bold hover:text-blue-400 text-xl">Master 100+ Tools in Applied AI, ML & Big Data</h1>
@@ -138,7 +143,7 @@ const Home = () => {
           </div>
 
           <div className="bg-white shadow-lg rounded-lg overflow-hidden flex-1 hover:shadow-2xl transition-shadow duration-300">
-            <img src="https://tipsg.in/assets/img/img/fulllstack.png" alt="Card 2" className="w-full h-48 object-cover" />
+            <img src="https://tipsg.in/assets/img/img/fulllstack.png" alt="Card 2" className="w-full h-48 object-cover transition-transform duration-1000 hover:scale-110" />
             <div className="p-4">
               <h2 className="mb-2 font-semibold">Become an AI & Data Science Expert</h2>
               <h1 className="font-bold hover:text-blue-400 text-xl">Master 100+ Tools in Applied AI, ML & Big Data</h1>
@@ -148,7 +153,7 @@ const Home = () => {
           </div>
 
           <div className="bg-white shadow-lg rounded-lg overflow-hidden flex-1 hover:shadow-2xl transition-shadow duration-300">
-            <img src="https://tipsg.in/assets/img/img/fulllstack.png" alt="Card 3" className="w-full h-48 object-cover" />
+            <img src="https://tipsg.in/assets/img/img/fulllstack.png" alt="Card 3" className="w-full h-48 object-cover transition-transform duration-1000 hover:scale-110" />
             <div className="p-4">
               <h2 className="mb-2 font-semibold">Become an AI & Data Science Expert</h2>
               <h1 className="font-bold hover:text-blue-400 text-xl">Master 100+ Tools in Applied AI, ML & Big Data</h1>
@@ -156,9 +161,43 @@ const Home = () => {
               <p className="text-sm mt-1">AI & Data Science Course India, IIT AI Degree, Applied AI Training, Data Science Certification</p>
             </div>
           </div>
-
         </div>
       </div>
+
+      <section>
+        <div className="postion">
+          <div className="relative bg-[url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d3')] bg-cover bg-center bg-fixed py-16">
+            <div className="absolute inset-0 bg-black/70"></div>
+            <div className="relative max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-10 text-center text-white">
+
+              <div className="flex flex-col items-center w-full md:w-1/3">
+                <div className="border border-white/70 rounded-full p-6 mb-4">
+                  <FaLaptop className="text-4xl text-white" />
+                </div>
+                <h3 className="font-semibold text-sm sm:text-base">LEARN FROM THE BEST –</h3>
+                <p className="font-bold text-sm sm:text-base">IITS + INDUSTRY EXPERTS</p>
+              </div>
+
+              <div className="flex flex-col items-center w-full md:w-1/3">
+                <div className="border border-white/70 rounded-full p-6 mb-4">
+                  <FaUsers className="text-4xl text-white" />
+                </div>
+                <h3 className="font-semibold text-sm sm:text-base">PLACEMENT-FOCUSED TRAINING</h3>
+                <p className="font-bold text-sm sm:text-base">WITH UPTO ₹25 LPA PACKAGES</p>
+              </div>
+
+              <div className="flex flex-col items-center w-full md:w-1/3">
+                <div className="border border-white/70 rounded-full p-6 mb-4">
+                  <FaHandshake className="text-4xl text-white" />
+                </div>
+                <h3 className="font-semibold text-sm sm:text-base">STACKABLE SKILLS FOR THE FUTURE –</h3>
+                <p className="font-bold text-sm sm:text-base">AI TO CYBER SECURITY</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
