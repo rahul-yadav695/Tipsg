@@ -6,7 +6,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
+    height: 40vh;
     color: white;
     display: flex;
     align-items: center;
@@ -21,5 +21,8 @@
 
     .slide1 {
         margin-top: -8vh;
+    }
+    .postion{
+        height: 100vh;
     }
 }

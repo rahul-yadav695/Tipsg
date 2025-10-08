@@ -167,8 +167,9 @@ const Home = () => {
       <section>
         <div className="postion">
           <div className="relative bg-[url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d3')] bg-cover bg-center bg-fixed py-16">
-            <div className="absolute inset-0 bg-black/70"></div>
-            <div className="relative max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-10 text-center text-white">
+            <div className="absolute inset-0 flex justify-between"></div>
+
+            <div className="relative max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-10 text-center">
 
               <div className="flex flex-col items-center w-full md:w-1/3">
                 <div className="border border-white/70 rounded-full p-6 mb-4">
@@ -198,6 +199,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
     </>
   )
 }
