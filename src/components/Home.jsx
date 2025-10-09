@@ -213,8 +213,8 @@ const Home = () => {
             <div className="absolute -right-5 top-40 bg-blue-500 text-white text-2xl sm:text-3xl font-bold w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl shadow-md">T</div>
 
             <div className="mt-10 sm:mt-12">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Internships</h2>
-              <p className="text-gray-800 font-semibold text-sm sm:text-base mb-3">Paid Internship in 3rd Year with Certification</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Training</h2>
+              <p className="text-gray-800 font-semibold text-sm sm:text-base mb-3">Industry-Focused IT Training in Jaipur</p>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 Every TIPS-G trainee receives a paid internship in the 3rd year itself, gaining real-time industry experience in emerging tech domains.
               </p>
@@ -223,7 +223,7 @@ const Home = () => {
               </p>
             </div>
           </div>
- 
+
           <div className="relative bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 hover:shadow-2xl hover:bg-blue-50 hover:rounded-3xl transition-all duration-300 w-full sm:w-[45%] lg:w-[30%]">
             <div className="absolute top-5 right-6 text-blue-600 font-semibold text-xl sm:text-2xl">(2)</div>
             <div className="absolute -right-5 top-40 bg-blue-500 text-white text-2xl sm:text-3xl font-bold w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl shadow-md">I</div>
@@ -251,7 +251,7 @@ const Home = () => {
 
             <div className="mt-10 sm:mt-12">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Internships</h2>
-              <p className="text-gray-800 font-semibold text-sm sm:text-base mb-3">Paid Internship in 3rd Year with Certification</p>
+              <p className="text-gray-800 font-semibold text-sm sm:text-base mb-3">100% Placement Support Before Graduation</p>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 Every TIPS-G trainee receives a paid internship in the 3rd year itself, gaining real-time industry experience in emerging tech domains.
               </p>
@@ -265,14 +265,14 @@ const Home = () => {
             <img className="w-[85%] sm:w-[90%] md:w-full rounded-xl object-contain" src="https://tipsg.in/assets/img/img/middle-image.png" alt="Internship illustration" />
           </div>
 
-          
+
           <div className="relative bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 hover:shadow-2xl hover:bg-blue-50 hover:rounded-3xl transition-all duration-300 w-full sm:w-[90%] md:w-[45%] lg:w-[28%]">
             <div className="absolute top-5 right-6 text-blue-600 font-semibold text-xl sm:text-2xl">(4)</div>
             <div className="absolute -right-5 top-40 bg-blue-500 text-white text-2xl sm:text-3xl font-bold w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl shadow-md">S</div>
 
             <div className="mt-10 sm:mt-12">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Internships</h2>
-              <p className="text-gray-800 font-semibold text-sm sm:text-base mb-3">Paid Internship in 3rd Year with Certification</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Salary</h2>
+              <p className="text-gray-800 font-semibold text-sm sm:text-base mb-3">High Salary Packages in Top IT Companies</p>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 Every TIPS-G trainee receives a paid internship in the 3rd year itself, gaining real-time industry experience in emerging tech domains.
               </p>
@@ -284,7 +284,23 @@ const Home = () => {
         </div>
 
 
+        <div className="flex justify-center">
+          <div className="relative bg-white rounded-2xl  shadow-lg p-6 sm:p-8 border border-gray-100 hover:shadow-2xl hover:bg-blue-50 hover:rounded-3xl transition-all duration-300 w-full  sm:w-[100%] md:w-[45%] lg:w-[40%] mt-10 ">
+            <div className="absolute top-5 right-6 text-blue-600 font-semibold text-xl sm:text-2xl">(5)</div>
+            <div className="absolute -right-5 top-40 bg-blue-500 text-white text-2xl sm:text-3xl font-bold w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl shadow-md">G</div>
 
+            <div className="mt-10 sm:mt-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Graduation</h2>
+              <p className="text-gray-800 font-semibold text-sm sm:text-base mb-3">Graduation from IITs, BITS Pilani & NAAC A++ Universities</p>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                Every TIPS-G trainee receives a paid internship in the 3rd year itself, gaining real-time industry experience in emerging tech domains.
+              </p>
+              <p className="text-gray-400 text-xs sm:text-sm mt-4 leading-snug">
+                paid internship Jaipur, internship in AI and cybersecurity, 3rd year internship with stipend, internship with certification Jaipur, job internship program India
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
     </>
