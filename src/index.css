@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+body{
+    font-family: Kanit, sans-serif;
+}
 
 .postion {
     background-image: url('https://tipsg.in/assets/img/img/bg-img.jpg');
