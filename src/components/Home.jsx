@@ -5,6 +5,7 @@ import { HiMenuAlt3, HiX } from "react-icons/hi"
 import { FaFacebookSquare, FaInstagramSquare, FaLinkedin, FaLongArrowAltRight } from "react-icons/fa"
 import { FaPhoneVolume } from "react-icons/fa6"
 import { FaLaptop, FaUsers, FaHandshake } from "react-icons/fa";
+import Card from "./Card"
 
 const Home = () => {
   const [openTop, setOpenTop] = useState(false)
@@ -313,7 +314,7 @@ const Home = () => {
       <section className="py-10 px-5 md:px-10 lg:px-20">
         <div className="container mx-auto">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
- 
+
             <div className="w-full lg:w-1/2">
               <h1 className="font-bold text-xl sm:text-2xl lg:text-2xl mt-3 leading-snug">
                 How TIPS-G Provides Professional Development for Career Growth Transforming Students into Industry-Ready Professionals
@@ -326,7 +327,7 @@ const Home = () => {
               <p className="text-gray-600 text-xs sm:text-sm mt-5">
                 Backed by We RNS IT Solutions Pvt. Ltd., a leading Indian IT company, our students are equipped with the skills and mindset needed to thrive in today’s competitive job market.
               </p>
- 
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
                 <div className="flex items-start gap-3">
                   <p className="text-blue-600 text-2xl leading-none">✔</p>
@@ -371,7 +372,23 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <div className="bg-[#08132a] py-16 px-5 md:px-20">
+        <h2 className="text-white font-bold text-4xl text-center">Our Top Courses</h2>
+        <div className="flex flex-col md:flex-row gap-10 justify-center md:justify-start items-center">
+          <Card  img='https://tipsg.in/assets/img/img/try1_11zon[1].jpg' text='Become a Data Scientist' />
+          <Card img="https://tipsg.in/assets/img/img/try.2_11zon[1]_11zon.jpg" text="Become a Cyber Security Expert"/>
+          <Card img='https://tipsg.in/assets/img/img/try.5_11zon_11zon.jpg' text='Become a Full-Stack Softwaredeveloper' />
+        </div>
+      </div>
 
+
+      <div className="bg-[#08132a] py-16 px-5 md:px-20"> 
+        <div className="flex flex-col md:flex-row gap-10 justify-center md:justify-start items-center">
+          <Card img='https://tipsg.in/assets/img/img/AR1.png' text='Become a Cybersecurity Psychology' />
+          <Card img="https://tipsg.in/assets/img/img/AR.png" text="Become a AR Storytelling"/>
+          <Card img="https://tipsg.in/assets/img/img/IIT_Jodhpur_Banner_475x218.png" text="IIT Jodhpur BS in Applied AI & Data Science"/> 
+        </div>
+      </div>
 
 
     </>
