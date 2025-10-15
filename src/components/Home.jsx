@@ -311,28 +311,49 @@ const Home = () => {
       </section>
 
       <section>
-        <div>
+        <div className="container m-10">
           <div className="flex flex-row mt-20">
             <div className="basis-1/2">
               <h1 className="font-bold text-2xl mt-3">How TIPS-G Provides Professional Development for Career Growth Transforming Students into Industry-Ready Professionals</h1>
               <p style={{ fontSize: "15px", marginTop: "30px" }}>At TIPS-G , we don’t just provide technical training — we build complete professionals. Our programs are designed to enhance your technical proficiency, sharpen your communication and soft skills, and build a strong foundation for long-term career success in the tech industry.</p>
               <p style={{ fontSize: "12px", marginTop: "30px" }}>Backed by We RNS IT Solutions Pvt. Ltd., a leading Indian IT company, our students are equipped with the skills and mindset needed to thrive in today’s competitive job market.</p>
 
-              <div className="flex flex-row">
+              <div className="flex flex-row mt-10">
                 <div className="basis-1/2">
-                  <div>
-                      
+                  <div className="flex w-70 gap-5">
+                    <p className="text-white w-12 h-8 rounded-full flex justify-center items-center bg-blue-600">✔</p>
+                    <p>Soft Skills & Business Communication Workshops</p>
                   </div>
                 </div>
                 <div className="basis-1/2">
                   <div>
+                    <div className="flex w-70 gap-5">
+                      <p className="text-white w-12 h-8 rounded-full flex justify-center items-center bg-blue-600">✔</p>
+                      <p>Leadership & Project Management Exposure</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              <div className="flex flex-row mt-10">
+                <div className="basis-1/2">
+                  <div className="flex w-70 gap-5">
+                    <p className="text-white w-12 h-8 rounded-full flex justify-center items-center bg-blue-600">✔</p>
+                    <p>Professional Certifications & LinkedIn Branding</p>
+                  </div>
+                </div>
+                <div className="basis-1/2">
+                  <div>
+                    <div className="flex w-70 gap-5">
+                      <p className="text-white w-12 h-8 rounded-full flex justify-center items-center bg-blue-600">✔</p>
+                      <p>Internship, Placement & Long-Term Career Support</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="basis-1/2">
-              <img src="https://tipsg.in/assets/img/img/collage%2003.png" alt="" />
+              <img className="w-1000" src="https://tipsg.in/assets/img/img/collage%2003.png" alt="" />
             </div>
           </div>
         </div>
