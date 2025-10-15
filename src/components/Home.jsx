@@ -313,9 +313,9 @@ const Home = () => {
       <section className="py-10 px-5 md:px-10 lg:px-20">
         <div className="container mx-auto">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
-
+ 
             <div className="w-full lg:w-1/2">
-              <h1 className="font-bold text-xl sm:text-2xl lg:text-3xl mt-3 leading-snug">
+              <h1 className="font-bold text-xl sm:text-2xl lg:text-2xl mt-3 leading-snug">
                 How TIPS-G Provides Professional Development for Career Growth Transforming Students into Industry-Ready Professionals
               </h1>
 
@@ -326,7 +326,7 @@ const Home = () => {
               <p className="text-gray-600 text-xs sm:text-sm mt-5">
                 Backed by We RNS IT Solutions Pvt. Ltd., a leading Indian IT company, our students are equipped with the skills and mindset needed to thrive in today’s competitive job market.
               </p>
-
+ 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
                 <div className="flex items-start gap-3">
                   <p className="text-blue-600 text-2xl leading-none">✔</p>
@@ -348,6 +348,20 @@ const Home = () => {
                   <p className="text-sm sm:text-base">Internship, Placement & Long-Term Career Support</p>
                 </div>
               </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 sm:gap-4 mt-10 rounded-2xl bg-gray-100 p-5 shadow-sm hover:shadow-md transition-all">
+                <div className="flex-shrink-0 flex justify-center sm:justify-start">
+                  <img className="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-cover" src="https://tipsg.in/assets/img/img/pooran.png" alt="Mr. Pooran Yadav" />
+                </div>
+                <div className="text-center sm:text-left">
+                  <h2 className="text-base sm:text-lg font-medium">
+                    <span className="text-blue-500 font-bold">Mr. Pooran Yadav </span>(HOD) Head of Department
+                  </h2>
+                  <p className="mt-3 text-sm sm:text-base text-gray-700">
+                    At TIPS-G, our programs are designed to equip students with both foundational knowledge and specialized skills that lead to industry-ready professionals.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="w-full lg:w-1/2 flex justify-center">
@@ -357,6 +371,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
 
 
     </>
