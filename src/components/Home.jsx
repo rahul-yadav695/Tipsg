@@ -310,54 +310,54 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <div className="container m-10">
-          <div className="flex flex-row mt-20">
-            <div className="basis-1/2">
-              <h1 className="font-bold text-2xl mt-3">How TIPS-G Provides Professional Development for Career Growth Transforming Students into Industry-Ready Professionals</h1>
-              <p style={{ fontSize: "15px", marginTop: "30px" }}>At TIPS-G , we don’t just provide technical training — we build complete professionals. Our programs are designed to enhance your technical proficiency, sharpen your communication and soft skills, and build a strong foundation for long-term career success in the tech industry.</p>
-              <p style={{ fontSize: "12px", marginTop: "30px" }}>Backed by We RNS IT Solutions Pvt. Ltd., a leading Indian IT company, our students are equipped with the skills and mindset needed to thrive in today’s competitive job market.</p>
+      <section className="py-10 px-5 md:px-10 lg:px-20">
+        <div className="container mx-auto">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
 
-              <div className="flex flex-row mt-10">
-                <div className="basis-1/2">
-                  <div className="flex w-70 gap-5">
-                    <p className="text-white w-12 h-8 rounded-full flex justify-center items-center bg-blue-600">✔</p>
-                    <p>Soft Skills & Business Communication Workshops</p>
-                  </div>
+            <div className="w-full lg:w-1/2">
+              <h1 className="font-bold text-xl sm:text-2xl lg:text-3xl mt-3 leading-snug">
+                How TIPS-G Provides Professional Development for Career Growth Transforming Students into Industry-Ready Professionals
+              </h1>
+
+              <p className="text-gray-700 text-sm sm:text-base mt-6">
+                At TIPS-G, we don’t just provide technical training — we build complete professionals. Our programs are designed to enhance your technical proficiency, sharpen your communication and soft skills, and build a strong foundation for long-term career success in the tech industry.
+              </p>
+
+              <p className="text-gray-600 text-xs sm:text-sm mt-5">
+                Backed by We RNS IT Solutions Pvt. Ltd., a leading Indian IT company, our students are equipped with the skills and mindset needed to thrive in today’s competitive job market.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
+                <div className="flex items-start gap-3">
+                  <p className="text-blue-600 text-2xl leading-none">✔</p>
+                  <p className="text-sm sm:text-base">Soft Skills & Business Communication Workshops</p>
                 </div>
-                <div className="basis-1/2">
-                  <div>
-                    <div className="flex w-70 gap-5">
-                      <p className="text-white w-12 h-8 rounded-full flex justify-center items-center bg-blue-600">✔</p>
-                      <p>Leadership & Project Management Exposure</p>
-                    </div>
-                  </div>
+                <div className="flex items-start gap-3">
+                  <p className="text-blue-600 text-2xl leading-none">✔</p>
+                  <p className="text-sm sm:text-base">Leadership & Project Management Exposure</p>
                 </div>
               </div>
 
-              <div className="flex flex-row mt-10">
-                <div className="basis-1/2">
-                  <div className="flex w-70 gap-5">
-                    <p className="text-white w-12 h-8 rounded-full flex justify-center items-center bg-blue-600">✔</p>
-                    <p>Professional Certifications & LinkedIn Branding</p>
-                  </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-6">
+                <div className="flex items-start gap-3">
+                  <p className="text-blue-600 text-2xl leading-none">✔</p>
+                  <p className="text-sm sm:text-base">Professional Certifications & LinkedIn Branding</p>
                 </div>
-                <div className="basis-1/2">
-                  <div>
-                    <div className="flex w-70 gap-5">
-                      <p className="text-white w-12 h-8 rounded-full flex justify-center items-center bg-blue-600">✔</p>
-                      <p>Internship, Placement & Long-Term Career Support</p>
-                    </div>
-                  </div>
+                <div className="flex items-start gap-3">
+                  <p className="text-blue-600 text-2xl leading-none">✔</p>
+                  <p className="text-sm sm:text-base">Internship, Placement & Long-Term Career Support</p>
                 </div>
               </div>
             </div>
-            <div className="basis-1/2">
-              <img className="w-1000" src="https://tipsg.in/assets/img/img/collage%2003.png" alt="" />
+
+            <div className="w-full lg:w-1/2 flex justify-center">
+              <img src="https://tipsg.in/assets/img/img/collage%2003.png" alt="Professional Development" className="w-full max-w-md lg:max-w-full rounded-xl object-cover" />
             </div>
+
           </div>
         </div>
       </section>
+
 
     </>
   )
