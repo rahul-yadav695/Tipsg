@@ -1,4 +1,6 @@
 import './App.css'
+import EcommerceApp from './components/Ecommerce'
+import TrevalApp from './components/TrevalApp'
 import Home from './components/Home'
 
 function App() {
@@ -6,7 +8,10 @@ function App() {
   return (
     <>
       <div>
-        <Home />
+        {/* <Home /> */}
+
+        {/* <EcommerceApp/> */}
+        <TrevalApp/>
       </div>
     </>
   )
