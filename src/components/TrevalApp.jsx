@@ -1,88 +1,120 @@
 import React, { useState } from "react";
 
 const DESTINATIONS = [
-  { id: 1, name: "Jaipur", price: 4999, image: "https://images.unsplash.com/photo-1603264040594-0e7b0e77c4e7" },
-  { id: 2, name: "Goa", price: 6999, image: "https://images.unsplash.com/photo-1560930950-1401bcd2c974" },
-  { id: 3, name: "Manali", price: 5999, image: "https://images.unsplash.com/photo-1612459284971-95c6f52ff5f0" },
-  { id: 4, name: "Ladakh", price: 10999, image: "https://images.unsplash.com/photo-1552728089-57bdde30beb3" },
-  { id: 5, name: "Kerala", price: 7999, image: "https://images.unsplash.com/photo-1560343090-f0409e92791a" },
-  { id: 6, name: "Udaipur", price: 5499, image: "https://images.unsplash.com/photo-1580894906475-0b09da7d3d9b" },
-  { id: 7, name: "Andaman", price: 12999, image: "https://images.unsplash.com/photo-1597165821826-8185b9e17138" },
-  { id: 8, name: "Darjeeling", price: 5799, image: "https://images.unsplash.com        /photo-1617968928935-7955afb3df35" },
-  { id: 9, name: "Rishikesh", price: 5299, image: "https://images.unsplash.com/photo-1562157873-818bc0726f68" },
-  { id: 10, name: "Varanasi", price: 4499, image: "https://images.unsplash.com/photo-1532453288672-3a27e9be9efd" },
-  { id: 11, name: "Mumbai", price: 6499, image: "https://images.unsplash.com/photo-1531811245198-76f44d7c3621" },
-  { id: 12, name: "Shimla", price: 5599, image: "https://images.unsplash.com/photo-1616259658395-3bb2d0bbd10e" }
+  { id: 1, name: "Jaipur", price: 4999, image: "https://images.unsplash.com/photo-1599661046289-e31897846e41" },
+  { id: 2, name: "Goa", price: 6999, image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e" },
+  { id: 3, name: "Manali", price: 5999, image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7" },
+  { id: 4, name: "Ladakh", price: 10999, image: "https://images.unsplash.com/photo-1593693411515-c20261bcad6e" },
+  { id: 5, name: "Kerala", price: 7999, image: "https://images.unsplash.com/photo-1593693397690-362cb9666fc2" },
+  { id: 6, name: "Udaipur", price: 5499, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX6GwKzso8-DW9klFa6XZJTId2lHxeivt9Rg&s" },
+  { id: 7, name: "Andaman", price: 12999, image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e" },
+  { id: 8, name: "Darjeeling", price: 5799, image: "https://trekinsikkim.in/_next/image?url=https%3A%2F%2Fupload.trekinsikkim.in%2Fuploads%2Fmedia-gallery%2Ffiles-1748685567719-977695027&w=3840&q=75" },
+  { id: 9, name: "Rishikesh", price: 5299, image: "https://upload.wikimedia.org/wikipedia/commons/7/74/Trayambakeshwar_Temple_VK.jpg" },
+  { id: 10, name: "Varanasi", price: 4499, image: "https://images.unsplash.com/photo-1561361513-2d000a50f0dc" }
 ];
 
 export default function TravelApp() {
-  const [search, setSearch] = useState("");
-  const [sort, setSort] = useState("");
+  const [cart, setCart] = useState([]);
+  const [showCart, setShowCart] = useState(false);
 
-  const list = [...DESTINATIONS]
-    .filter(d => d.name.toLowerCase().includes(search.toLowerCase()))
-    .sort((a, b) =>
-      sort === "low" ? a.price - b.price :
-      sort === "high" ? b.price - a.price : 0
-    );
+  const addToCart = (item) => {
+    if (cart.find(c => c.id === item.id)) return;
+    setCart([...cart, item]);
+  };
+
+  const removeFromCart = (id) => {
+    setCart(cart.filter(item => item.id !== id));
+  };
+
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white text-gray-900">
+    <div className="min-h-screen bg-gray-50">
 
-      {/* Navbar */}
-      <div className="backdrop-blur-xl bg-white/80 border-b shadow-sm px-6 py-4 text-2xl font-bold sticky top-0 z-10 flex items-center">
-        ✈️ <span className="ml-1">Travel</span><span className="text-blue-600">Find</span>
-      </div>
+      <div className="flex justify-between items-center p-4 bg-white shadow sticky top-0 z-10">
+        <h1 className="text-xl font-bold">✈️ TravelFind</h1>
 
-      {/* Search + Sort */}
-      <div className="max-w-5xl mx-auto px-4 py-6 flex flex-col sm:flex-row gap-3">
-        <div className="flex items-center w-full bg-white/70 backdrop-blur-md border rounded-full px-4 shadow-sm h-12">
-          <span className="text-gray-500 mr-2">🔍</span>
-          <input
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            placeholder="Search destination..."
-            className="flex-1 bg-transparent outline-none"
-          />
+        <div className="relative cursor-pointer text-3xl" onClick={() => setShowCart(true)}>
+          🧳
+          {cart.length > 0 && (
+            <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs px-2 rounded-full">
+              {cart.length}
+            </span>
+          )}
         </div>
-
-        <select
-          onChange={e => setSort(e.target.value)}
-          className="h-12 px-4 rounded-full border shadow-sm bg-white/70 backdrop-blur-md focus:ring-2 focus:ring-blue-400"
-        >
-          <option value="">Sort by Price</option>
-          <option value="low">Low → High</option>
-          <option value="high">High → Low</option>
-        </select>
       </div>
 
-      {/* Cards */}
-      <div className="max-w-5xl mx-auto px-4 pb-10 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-        {list.map(d => (
-          <div
-            key={d.id}
-            className="rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
-          >
-            <div className="relative group">
-              <img src={d.image} alt={d.name} className="h-52 w-full object-cover group-hover:scale-110 transition duration-500" />
-              <span className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold shadow">
-                ₹{d.price}
-              </span>
-            </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-5 p-5">
+        {DESTINATIONS.map(d => (
+          <div key={d.id} className="bg-white rounded-xl shadow p-3">
+            <img src={d.image} className="h-40 w-full object-cover rounded-lg" />
+            <h3 className="mt-2 font-bold">{d.name}</h3>
+            <p>₹{d.price}</p>
 
-            <div className="p-4 space-y-3">
-              <h3 className="text-lg font-bold">{d.name}</h3>
-
-              <button
-                onClick={() => alert(`Booked: ${d.name}`)}
-                className="w-full h-11 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium shadow-md hover:shadow-lg hover:-translate-y-0.5 transition"
-              >
-                Book Now
-              </button>
-            </div>
+            <button
+              onClick={() => addToCart(d)}
+              disabled={cart.some(c => c.id === d.id)}
+              className={`mt-2 w-full py-2 rounded ${cart.some(c => c.id === d.id)
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-blue-600 text-white"
+                }`}
+            >
+              {cart.some(c => c.id === d.id) ? "Added" : "Book Now"}
+            </button>
           </div>
         ))}
       </div>
+
+      <div
+        className={`fixed inset-0 bg-black/40 transition-opacity duration-300 ${showCart ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+        onClick={() => setShowCart(false)}
+      />
+
+      <div
+        className={`fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform transition-transform duration-300 z-20 ${showCart ? "translate-x-0" : "translate-x-full"
+          }`}
+      >
+        <div className="p-4 border-b flex justify-between items-center">
+          <h2 className="font-bold text-lg">Your Trips</h2>
+          <button onClick={() => setShowCart(false)}>❌</button>
+        </div>
+
+        <div className="p-4 space-y-4 overflow-y-auto h-[70%]">
+          {cart.length === 0 ? (
+            <p>No bookings</p>
+          ) : (
+            cart.map(item => (
+              <div key={item.id} className="flex items-center justify-between">
+                <div className="flex gap-3 items-center">
+                  <img src={item.image} className="w-16 h-16 object-cover rounded-lg" />
+                  <div>
+                    <h4 className="font-semibold">{item.name}</h4>
+                    <p className="text-sm text-gray-600">₹{item.price}</p>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => removeFromCart(item.id)}
+                  className="text-red-500 hover:text-red-700 text-lg">❌
+                </button>
+              </div>
+            ))
+          )}
+        </div>
+
+        <div className="absolute bottom-0 w-full p-4 border-t bg-white">
+          <div className="flex justify-between font-bold mb-3">
+            <span>Total</span>
+            <span>₹{total}</span>
+          </div>
+
+          <button className="w-full py-3 bg-green-600 text-white rounded-xl">
+            Checkout
+          </button>
+        </div>
+      </div>
+
     </div>
   );
 }
